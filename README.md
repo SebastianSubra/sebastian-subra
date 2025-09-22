@@ -88,6 +88,3 @@ Si deseas contribuir a este proyecto, por favor sigue estos pasos:
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
-
-## Token
-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
