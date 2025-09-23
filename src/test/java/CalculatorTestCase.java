@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -26,6 +27,20 @@ public class CalculatorTestCase{
     }
 
     @Test
+    @DisplayName("Check multiplication with zero")
+    void testMultiplyWithZero(){
+        int result = calculator.multiply(0, 20);
+        assertEquals(result, 0);
+    }
+
+    @Test
+    @DisplayName("Check multiplication with negative numbers")
+    void testMultiplyWithNegative(){
+        int result = calculator.multiply(-4, 20);
+        assertEquals(result, -80);
+    }
+
+    @Test
     @DisplayName("Check concatenation of two strings")
     void testConcat(){
         String result = calculator.concat("Carlos", "Ramirez");
@@ -45,6 +60,16 @@ public class CalculatorTestCase{
         double result = calculator.sum(10.5, 20.3);
         assertEquals(result, 30.8);
     } 
+
+    @Test 
+    @DisplayName("Check sum with negative values")
+    void testSumWithNegative(){
+        double result = calculator.sum(-10.5, 20.3);
+        assertEquals(result, 9.8);
+
+        double result2 = calculator.sum(-10.5, -20.3);
+        assertEquals(result2, -30.8);
+    }
     
     @Test
     @DisplayName("Check discount application")
@@ -54,19 +79,52 @@ public class CalculatorTestCase{
     }
 
     @Test
+    @DisplayName("Check discount with zero percent")
+    void testDiscountWithZeroPercent(){
+        double result = calculator.discount(100, 0);
+        assertEquals(result, 100);
+
+        double result2 = calculator.discount(100, 100);
+        assertEquals(result2, 0);
+    }
+
+    @Test
     @DisplayName("Check discount with invalid percentage")
     void testDiscountInvalidPercentage(){
-       double result = calculator.discount(100, -1);
-       assertEquals(result, java.lang.IllegalArgumentException.class);
-       /*assertThrows(IllegalArgumentException.class, () -> {
-           calculator.discount(100, 150);*/
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            calculator.discount(100, 150);
+        });
+        assertEquals("Percentage must be between 0 and 100", exception.getMessage());
+    }
+
+    @Test
+    @DisplayName("Check discount with negative percentage")
+    void testDiscountNegativePercentage(){
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            calculator.discount(100, -10);
+        });
+        assertEquals("Percentage must be between 0 and 100", exception.getMessage());
     }
 
     @Test
     @DisplayName("Check total calculation of a list of amounts")
     void testCalculateTotal(){
-        List<Double> amounts = calculator.calculateTotal();
-
+        List<Double> amounts = new ArrayList<>();
+        amounts.add(10.0);
+        amounts.add(20.0);
+        amounts.add(30.0);
+        double totalAmount = calculator.calculateTotal(amounts);
+        assertEquals(totalAmount, 60.0);
     }
+
+    @Test
+    @DisplayName("Check total calculation with empty list")
+    void testCalculateTotalWithEmptyList(){
+        List<Double> amounts = new ArrayList<>();
+        double totalAmount = calculator.calculateTotal(amounts);
+        assertEquals(totalAmount, 0.0);
+    }
+
+
 
 }
