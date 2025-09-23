@@ -2,6 +2,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +10,12 @@ import com.example.Searcher;
 
 public class SearcherTestCase{
 
-    Searcher searcher = new Searcher();
+    Searcher searcher;
+
+    @BeforeEach
+    void setUp(){
+        searcher = new Searcher();
+    }
 
     @Test
     @DisplayName("Check exact phrase search")
@@ -33,6 +39,13 @@ public class SearcherTestCase{
     }
 
     @Test
+    @DisplayName("Check word search when word does not exist")
+    void testSearchWordNotFound(){
+        boolean check = searcher.searchWord("Bonjour", List.of("Hola", "Adios", "Hello"));
+        assertFalse(check);
+    }
+
+    @Test
     @DisplayName("Check get word by index")
     void testGetWordByIndex(){
         String word = searcher.getWordByIndex(List.of("Hola", "Adios", "Hello"),2);
@@ -43,7 +56,10 @@ public class SearcherTestCase{
     @DisplayName("Check get word by index out of bounds")
     void testGetWordByIndexOutOfBounds(){
         String word = searcher.getWordByIndex(List.of("Hola", "Adios", "Hello"),-1);
-        assertNull(word);   
+        assertNull(word);  
+        
+        String word2 = searcher.getWordByIndex(List.of("Hola", "Adios", "Hello"),8);
+        assertNull(word2);
     }
 
     @Test

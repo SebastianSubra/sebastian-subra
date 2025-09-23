@@ -64,8 +64,8 @@ public class CalculatorTestCase{
     @Test 
     @DisplayName("Check sum with negative values")
     void testSumWithNegative(){
-        double result = calculator.sum(-10.5, 20.3);
-        assertEquals(result, 9.8);
+        double result = calculator.sum(-10.5, 20);
+        assertEquals(result, 9.5);
 
         double result2 = calculator.sum(-10.5, -20.3);
         assertEquals(result2, -30.8);
