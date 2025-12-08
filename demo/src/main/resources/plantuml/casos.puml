@@ -1,0 +1,11 @@
+@startuml
+
+actor Usuario
+
+usecase "Buscar pedido por ID" as UC1
+usecase "Visualizar detalles del pedido" as UC2
+
+Usuario --> UC1
+UC1 --> UC2
+
+@enduml

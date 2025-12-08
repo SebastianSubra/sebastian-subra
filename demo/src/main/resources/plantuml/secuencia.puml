@@ -1,0 +1,24 @@
+@startuml
+
+actor User
+
+User -> OrderView : escribe ID y pulsa "Search"
+OrderView -> OrderController : actionPerformed()
+
+OrderController -> OrderController : findOrderById(id)
+OrderController --> Order : getId()
+
+alt Pedido encontrado
+    OrderController -> OrderView : displayOrder(order)
+    OrderView -> Order : getArticulos()
+    loop por cada artículo
+        OrderView -> Article : getNombre(), getCantidad(), getPrecio(), getDescuento()
+        OrderView -> Article : getGrossAmount(), getDiscountedAmount()
+    end
+    OrderView -> Order : getGrossTotal()
+    OrderView -> Order : getDiscountedTotal()
+else Pedido no existe
+    OrderController -> OrderView : resultArea.setText("No existe el pedido")
+end
+
+@enduml

@@ -1,0 +1,91 @@
+@startuml
+
+' ============================================================
+'                     PAQUETES / ORGANIZACIÓN
+' ============================================================
+
+package "com.example.model" {
+    class Article {
+        - nombre : String
+        - cantidad : int
+        - precio : double
+        - descuento : double
+
+        + Article()
+        + Article(String, int, double, double)
+        + getNombre() : String
+        + getCantidad() : int
+        + getPrecio() : double
+        + getDescuento() : double
+        + getGrossAmount() : double
+        + getDiscountedAmount() : double
+        + toString() : String
+    }
+
+    class Calculator {
+        {static} multiply(a: double, b: double) : double
+        {static} concat(a: String, b: String) : String
+        {static} discount(amount: double, percent: double) : double
+        {static} calculateTotal(amounts: List<Double>) : double
+    }
+
+    class Order {
+        - id : String
+        - articulos : List<Article>
+
+        + Order()
+        + getId() : String
+        + getArticulos() : List<Article>
+        + getGrossTotal() : double
+        + getDiscountedTotal() : double
+        + toString() : String
+    }
+
+    class Searcher {
+        + searchExactPhrase(phrase: String, list: List<String>) : boolean
+        + searchPartialPhrase(phrase: String, list: List<String>) : List<String>
+        + filterByKeyword(keyword: String, list: List<String>) : List<String>
+    }
+}
+
+package "com.example.view" {
+    class OrderView {
+        - searchField : JTextField
+        - searchButton : JButton
+        - resultArea : JTextArea
+
+        + OrderView()
+        + displayOrder(order: Order)
+    }
+}
+
+package "com.example.controller" {
+    class OrderController {
+        - view : OrderView
+        - orders : List<Order>
+
+        + OrderController(OrderView, List<Order>)
+        + findOrderById(id: String) : Order
+    }
+}
+
+package "com.example" {
+    class Main {
+        + main(String[])
+    }
+}
+
+' ============================================================
+'                           RELACIONES
+' ============================================================
+
+Order "1" --> "*" Article
+Order --> Calculator : usa
+Searcher --> Order : analiza pedidos
+OrderController --> OrderView : controla
+OrderController --> Order : gestiona
+OrderView --> Order : muestra
+Main --> OrderController
+Main --> OrderView
+
+@enduml
