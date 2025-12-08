@@ -1,0 +1,28 @@
+2025-12-08 18:47:32,251 INFO  com.example.Main - Starting Order Management System...
+2025-12-08 18:47:32,767 DEBUG com.example.Main - Loaded order: O001
+2025-12-08 18:47:32,791 DEBUG com.example.Main - Loaded order: O002
+2025-12-08 18:47:32,791 DEBUG com.example.Main - Loaded order: O003
+2025-12-08 18:47:32,791 DEBUG com.example.Main - Loaded order: O004
+2025-12-08 18:47:32,791 DEBUG com.example.Main - Loaded order: O005
+2025-12-08 18:47:32,791 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2025-12-08 19:00:13,532 INFO  com.example.Main - Starting Order Management System...
+2025-12-08 19:00:13,934 DEBUG com.example.Main - Loaded order: O001
+2025-12-08 19:00:13,956 DEBUG com.example.Main - Loaded order: O002
+2025-12-08 19:00:13,959 DEBUG com.example.Main - Loaded order: O003
+2025-12-08 19:00:13,960 DEBUG com.example.Main - Loaded order: O004
+2025-12-08 19:00:13,962 DEBUG com.example.Main - Loaded order: O005
+2025-12-08 19:00:13,963 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2025-12-08 19:04:06,818 INFO  com.example.Main - Starting Order Management System...
+2025-12-08 19:04:07,156 DEBUG com.example.Main - Loaded order: O001
+2025-12-08 19:04:07,182 DEBUG com.example.Main - Loaded order: O002
+2025-12-08 19:04:07,185 DEBUG com.example.Main - Loaded order: O003
+2025-12-08 19:04:07,185 DEBUG com.example.Main - Loaded order: O004
+2025-12-08 19:04:07,186 DEBUG com.example.Main - Loaded order: O005
+2025-12-08 19:04:07,186 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2025-12-08 19:11:54,377 INFO  com.example.Main - Starting Order Management System...
+2025-12-08 19:11:54,713 DEBUG com.example.Main - Loaded order: O001
+2025-12-08 19:11:54,734 DEBUG com.example.Main - Loaded order: O002
+2025-12-08 19:11:54,736 DEBUG com.example.Main - Loaded order: O003
+2025-12-08 19:11:54,736 DEBUG com.example.Main - Loaded order: O004
+2025-12-08 19:11:54,736 DEBUG com.example.Main - Loaded order: O005
+2025-12-08 19:11:54,736 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
