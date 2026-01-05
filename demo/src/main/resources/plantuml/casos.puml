@@ -1,11 +1,19 @@
 @startuml
+left to right direction
 
-actor Usuario
+actor User
 
-usecase "Buscar pedido por ID" as UC1
-usecase "Visualizar detalles del pedido" as UC2
+User --> (List orders)
+User --> (Search order)
+User --> (View order details)
+User --> (Create order)
+User --> (Delete order)
 
-Usuario --> UC1
-UC1 --> UC2
+(Search order) --> (View order details) : <<include>>
+(Create order) --> (List orders) : <<include>>
+(Delete order) --> (List orders) : <<include>>
 
 @enduml
+
+User --> (Edit order)
+(Edit order) --> (View order details) : <<include>>

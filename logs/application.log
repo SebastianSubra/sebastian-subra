@@ -26,3 +26,145 @@
 2025-12-08 19:11:54,736 DEBUG com.example.Main - Loaded order: O004
 2025-12-08 19:11:54,736 DEBUG com.example.Main - Loaded order: O005
 2025-12-08 19:11:54,736 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2025-12-08 19:43:31,516 INFO  com.example.Main - Starting Order Management System...
+2025-12-08 19:43:31,809 DEBUG com.example.Main - Loaded order: O001
+2025-12-08 19:43:31,828 DEBUG com.example.Main - Loaded order: O002
+2025-12-08 19:43:31,828 DEBUG com.example.Main - Loaded order: O003
+2025-12-08 19:43:31,828 DEBUG com.example.Main - Loaded order: O004
+2025-12-08 19:43:31,832 DEBUG com.example.Main - Loaded order: O005
+2025-12-08 19:43:31,833 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2025-12-08 19:45:01,889 INFO  com.example.Main - Starting Order Management System...
+2025-12-08 19:45:02,204 DEBUG com.example.Main - Loaded order: O001
+2025-12-08 19:45:02,225 DEBUG com.example.Main - Loaded order: O002
+2025-12-08 19:45:02,227 DEBUG com.example.Main - Loaded order: O003
+2025-12-08 19:45:02,227 DEBUG com.example.Main - Loaded order: O004
+2025-12-08 19:45:02,227 DEBUG com.example.Main - Loaded order: O005
+2025-12-08 19:45:02,227 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2026-01-05 14:03:08,373 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:03:08,698 DEBUG com.example.Main - Loaded order: O001
+2026-01-05 14:03:08,716 DEBUG com.example.Main - Loaded order: O002
+2026-01-05 14:03:08,717 DEBUG com.example.Main - Loaded order: O003
+2026-01-05 14:03:08,719 DEBUG com.example.Main - Loaded order: O004
+2026-01-05 14:03:08,721 DEBUG com.example.Main - Loaded order: O005
+2026-01-05 14:03:08,722 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2026-01-05 14:18:07,028 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:18:07,280 INFO  com.example.Main - ? Orders loaded successfully. Total: 0
+2026-01-05 14:18:33,763 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:18:33,987 INFO  com.example.Main - ? Orders loaded successfully. Total: 0
+2026-01-05 14:18:59,463 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:18:59,700 INFO  com.example.Main - ? Orders loaded successfully. Total: 0
+2026-01-05 14:21:53,969 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:21:54,196 ERROR com.example.Main - Error reading orders.json
+java.lang.RuntimeException: orders.json not found in resources
+	at com.example.Main.main(Main.java:28)
+2026-01-05 14:21:56,863 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:21:57,069 ERROR com.example.Main - Error reading orders.json
+java.lang.RuntimeException: orders.json not found in resources
+	at com.example.Main.main(Main.java:28)
+2026-01-05 14:22:29,378 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:22:29,686 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2026-01-05 14:28:03,970 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:28:04,293 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2026-01-05 14:28:23,296 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:28:23,637 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2026-01-05 14:33:33,555 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:33:33,913 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2026-01-05 14:40:29,553 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:40:29,850 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2026-01-05 14:46:56,424 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:46:56,764 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2026-01-05 14:50:34,667 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:50:35,027 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2026-01-05 14:51:33,815 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:51:34,120 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2026-01-05 14:58:02,634 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 14:58:02,850 ERROR com.example.Main - Error reading orders.json
+java.lang.RuntimeException: orders.json not found in resources
+	at com.example.Main.main(Main.java:28)
+2026-01-05 15:07:16,822 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 15:07:17,164 INFO  com.example.Main - Orders loaded from resources orders.json
+2026-01-05 15:07:17,164 INFO  com.example.Main - ? Orders loaded successfully. Total: 5
+2026-01-05 15:07:55,150 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 15:07:55,474 ERROR com.example.Main - Error reading orders.json
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "discountedTotal" (class com.example.model.Order), not marked as ignorable (2 known properties: "id", "articles"])
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 2, column: 28] (through reference chain: java.util.ArrayList[0]->com.example.model.Order["discountedTotal"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1153)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2241)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1793)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1771)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:316)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:361)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:246)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:30)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4905)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3733)
+	at com.example.Main.main(Main.java:30)
+2026-01-05 15:08:59,004 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 15:08:59,340 ERROR com.example.Main - Error reading orders.json
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "discountedTotal" (class com.example.model.Order), not marked as ignorable (2 known properties: "id", "articles"])
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 2, column: 28] (through reference chain: java.util.ArrayList[0]->com.example.model.Order["discountedTotal"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1153)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2241)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1793)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1771)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:316)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:361)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:246)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:30)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4905)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3733)
+	at com.example.Main.main(Main.java:30)
+2026-01-05 15:09:55,765 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 15:09:56,108 ERROR com.example.Main - Error reading orders.json
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "discountedAmount" (class com.example.model.Article), not marked as ignorable (4 known properties: "discount", "name", "unitPrice", "quantity"])
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 6, column: 30] (through reference chain: java.util.ArrayList[0]->com.example.model.Order["articles"]->java.util.ArrayList[0]->com.example.model.Article["discountedAmount"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1153)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2241)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1793)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1771)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:316)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:361)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:246)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:30)
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:310)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:361)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:246)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:30)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4905)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3733)
+	at com.example.Main.main(Main.java:30)
+2026-01-05 15:11:15,004 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 15:11:15,308 INFO  com.example.Main - Orders loaded from external orders.json
+2026-01-05 15:11:15,308 INFO  com.example.Main - ? Orders loaded successfully. Total: 6
+2026-01-05 15:12:43,055 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 15:12:43,380 INFO  com.example.Main - Orders loaded from external orders.json
+2026-01-05 15:12:43,380 INFO  com.example.Main - ? Orders loaded successfully. Total: 6
+2026-01-05 15:13:15,960 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 15:13:16,293 INFO  com.example.Main - Orders loaded from external orders.json
+2026-01-05 15:13:16,294 INFO  com.example.Main - ? Orders loaded successfully. Total: 6
+2026-01-05 15:45:36,363 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 15:45:36,792 INFO  com.example.Main - Orders loaded from external orders.json
+2026-01-05 15:45:36,792 INFO  com.example.Main - ? Orders loaded successfully. Total: 6
+2026-01-05 15:50:05,671 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 15:50:05,986 INFO  com.example.Main - Orders loaded from external orders.json
+2026-01-05 15:50:05,986 INFO  com.example.Main - ? Orders loaded successfully. Total: 7
+2026-01-05 16:02:46,069 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 16:02:46,401 INFO  com.example.Main - Orders loaded from external orders.json
+2026-01-05 16:02:46,401 INFO  com.example.Main - ? Orders loaded successfully. Total: 7
+2026-01-05 16:03:29,124 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 16:03:29,439 INFO  com.example.Main - Orders loaded from external orders.json
+2026-01-05 16:03:29,440 INFO  com.example.Main - ? Orders loaded successfully. Total: 7
+2026-01-05 16:03:58,030 INFO  com.example.Main - Starting Order Management System...
+2026-01-05 16:03:58,344 INFO  com.example.Main - Orders loaded from external orders.json
+2026-01-05 16:03:58,345 INFO  com.example.Main - ? Orders loaded successfully. Total: 6

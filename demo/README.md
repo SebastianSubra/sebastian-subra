@@ -1,167 +1,220 @@
-# Proyecto Java Maven - [Nombre del Proyecto]
+# Order Management System (Java + Maven)
 
-Este proyecto es una plantilla base para comenzar a trabajar con aplicaciones Java utilizando Maven. Asegúrate de seguir las instrucciones para configurar tu entorno correctamente y entender cómo contribuir al proyecto.
+Aplicación de escritorio desarrollada en **Java** utilizando **Maven** y el patrón
+**Modelo–Vista–Controlador (MVC)**. La aplicación permite gestionar pedidos mediante
+una interfaz gráfica, incluyendo búsqueda, creación, edición y eliminación de pedidos,
+así como persistencia de datos en formato JSON.
+
+Este proyecto ha sido desarrollado como parte de la asignatura **Introducción a la Ingeniería**.
+
+---
 
 ## Tabla de Contenidos
 
-- [Introducción](#introducción)
-- [Requisitos](#requisitos)
-- [Configuración del Entorno](#configuración-del-entorno)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Compilación y Ejecución](#compilación-y-ejecución)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
+- Introducción
+- Requisitos
+- Configuración del Entorno
+- Estructura del Proyecto
+- Compilación y Ejecución
+- Funcionalidades Implementadas
+- Persistencia de Datos
+- Diagramas UML
+- Releases
+- Licencia
 
 ---
 
 ## Introducción
 
-Este es un proyecto base para aprender sobre el uso de **Java** y **Maven**. El objetivo familiarizarse con las buenas prácticas de desarrollo y gestionar dependencias utilizando Maven.
+El objetivo de este proyecto es aplicar los conceptos fundamentales de la ingeniería del
+software mediante el desarrollo de una aplicación Java real, estructurada y mantenible.
+
+Se han utilizado buenas prácticas de desarrollo como la separación de responsabilidades
+mediante el patrón MVC, persistencia de datos y documentación mediante diagramas UML.
+
+---
 
 ## Requisitos
 
-Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
+Para ejecutar el proyecto es necesario tener instalado:
 
-- **Java 8+** (JDK) - Puedes descargarlo desde [Oracle](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) o [OpenJDK](https://openjdk.java.net/)
-- **Maven** - Puedes instalar Maven siguiendo las instrucciones en su sitio oficial: [https://maven.apache.org/install.html](https://maven.apache.org/install.html)
-- **IDE recomendada:** Visual Studio Code o cualquier editor de tu preferencia con soporte para Java.
+- Java 8 o superior
+- Maven
+- IDE recomendado: Visual Studio Code, IntelliJ IDEA o Eclipse
+
+Puedes comprobar las versiones instaladas con:
+
+java -version  
+mvn -version
+
+---
 
 ## Configuración del Entorno
 
-### 1. Instalar Java
-Asegúrate de que tienes **Java 8** o una versión superior instalada. Puedes verificarlo con el siguiente comando:
+Si se utiliza Visual Studio Code, se recomienda instalar las siguientes extensiones:
 
-```bash
-java -version
-```
+- Java Extension Pack
+- Maven for Java
 
-### 2. Instalar Maven
-Una vez que tengas Java instalado, puedes proceder con la instalación de Maven. Para verificar que Maven esté instalado correctamente, ejecuta el siguiente comando:
+---
 
-mvn -version
+## Estructura del Proyecto
 
-### 3. Configurar el IDE
-Para trabajar con este proyecto, puedes usar cualquier IDE que soporte Java, como Visual Studio Code, IntelliJ IDEA, Eclipse, etc. Si estás usando Visual Studio Code, asegúrate de instalar las siguientes extensiones:
-
-Java Extension Pack (de Microsoft)
-Maven for Java
-
-## Estructura del proyecto
-
-```plaintext
-[NombreDelProyecto]/
+demo/
 ├── src/
 │   └── main/
-│       └── java/
-│           └── com/
-│               └── ejemplo/
-│                   └── App.java
+│       ├── java/
+│       │   └── com/example/
+│       │       ├── controller/
+│       │       ├── model/
+│       │       ├── view/
+│       │       └── Main.java
+│       └── resources/
+│           ├── app.png
+│           ├── logback.xml
+│           ├── orders.json
+│           └── plantuml/
+│               ├── casos.puml
+│               ├── clases.puml
+│               └── secuencia.puml
+├── orders.json
 ├── pom.xml
-├── target/
 └── README.md
-```
 
-## Compilación y ejecución
+---
 
-Para compilar y ejecutar el proyecto, sigue estos pasos:
+## Compilación y Ejecución
 
-Abre una terminal en la raíz del proyecto.
+Desde la raíz del proyecto:
 
-Ejecuta el siguiente comando para compilar el proyecto:
-```bash
-mvn clean install
-```
-Para ejecutar la aplicación, usa el siguiente comando:
-```bash
+mvn clean install  
 mvn exec:java
-```
 
-## Contribución
+---
 
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
-- Haz un fork del repositorio.
-- Crea una nueva rama (git checkout -b feature-nueva-funcionalidad).
-- Realiza tus cambios y haz commit (git commit -am 'Agregué nueva funcionalidad').
-- Empuja los cambios a tu fork (git push origin feature-nueva-funcionalidad).
-- Crea un pull request.
+## Funcionalidades Implementadas
 
-## Funcionalidades Implementadas Según el Enunciado de la Actividad
+### 1. Icono personalizado de la aplicación
 
-Como parte de la práctica solicitada, se han añadido al proyecto las siguientes funcionalidades:
+La aplicación incluye un icono propio para la ventana principal.
 
-### 1. Icono personalizado de la aplicación (app.png)
-
-Se agregó un icono propio a la interfaz gráfica.  
-El archivo se encuentra en:
-
+Archivo:
 src/main/resources/app.png
 
-Y se carga en la ventana principal mediante:
+---
 
-setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/app.png")));
+### 2. Conversión dinámica EUR / USD
+
+Se ha implementado un servicio de conversión de moneda que obtiene el tipo de
+cambio EUR/USD en tiempo real mediante una API externa. Este valor se utiliza
+para mostrar los importes tanto en euros como en dólares.
 
 ---
 
-### 2. Obtención dinámica del tipo de cambio EUR/USD
+### 3. Visualización y búsqueda de pedidos
 
-Se implementó la clase:
-
-com.example.model.CurrencyService
-
-La aplicación obtiene el tipo de cambio en tiempo real llamando al servicio gratuito:
-
-https://api.frankfurter.app/latest?from=EUR&to=USD
-
-Este servicio devuelve un JSON con el valor actualizado del dólar respecto al euro, el cual se utiliza en el controlador para actualizar la vista mediante:
-
-view.displayOrder(order, rate);
+- Al iniciar la aplicación se muestra una lista con los IDs de todos los pedidos
+- El usuario puede buscar un pedido introduciendo su ID
+- Se muestra el detalle completo del pedido seleccionado
+- Se calculan y muestran los totales en EUR y USD
 
 ---
 
-### 3. Visualización de totales en EUR y USD
+### 4. Creación de pedidos
 
-En el método displayOrder() de OrderView se muestran los importes en ambas monedas.
-
-La conversión se realiza mediante:
-
-grossUSD = grossEUR * rate  
-discountedUSD = discountedEUR * rate
-
-La interfaz gráfica muestra:
-
-- Gross total (EUR)  
-- Discounted total (EUR)  
-- Gross total (USD)  
-- Discounted total (USD)
-
-permitiendo visualizar claramente ambos valores.
+- El usuario puede crear nuevos pedidos desde la interfaz gráfica
+- El ID del pedido debe ser único
+- El pedido creado se añade automáticamente a la lista
+- Los cambios se guardan de forma persistente
 
 ---
 
-### 4. Generación de la primera release en GitHub
+### 5. Edición de pedidos (opcional)
 
-Para completar la actividad se generó una release en GitHub siguiendo estos pasos:
-
-1. Subir todos los cambios al repositorio.
-2. Ir a la sección “Releases”.
-3. Seleccionar “Draft a new release”.
-4. Crear la versión v1.0 con el título:  
-   **First release – Icon and EUR/USD conversion**
-5. (Opcional) Adjuntar el archivo JAR generado con Maven mediante:
-
-mvn clean package
+- El usuario puede editar un pedido existente
+- Solo se permite modificar:
+  - cantidad de los artículos
+  - descuento aplicado a los artículos
+- El resto de la información del pedido permanece inalterada
+- Los cambios se guardan de forma persistente en el archivo JSON
 
 ---
 
-### Resultado final
+### 6. Eliminación de pedidos
 
-La aplicación cumple todos los requisitos del enunciado:
+- El usuario puede eliminar pedidos seleccionándolos desde la lista
+- Se solicita confirmación antes de eliminar
+- La lista se actualiza automáticamente
+- Los cambios se guardan de forma persistente
 
-- Integra un icono personalizado en la ventana principal.
-- Consulta un servicio web externo para obtener el tipo de cambio EUR→USD.
-- Muestra correctamente los totales en ambas monedas dentro de la interfaz gráfica.
-- Se publicó una release oficial en GitHub con la funcionalidad implementada.
+---
+
+## Persistencia de Datos
+
+La aplicación utiliza archivos JSON como sistema de persistencia.
+
+Existen dos archivos JSON con funciones distintas:
+
+- src/main/resources/orders.json  
+  Contiene datos iniciales de ejemplo y se utiliza únicamente si no existe
+  un archivo persistente.
+
+- orders.json (raíz del proyecto)  
+  Archivo persistente que se crea y actualiza automáticamente al crear,
+  editar o borrar pedidos.
+
+Los cambios realizados por el usuario se mantienen entre ejecuciones de la aplicación.
+
+---
+
+## Diagramas UML
+
+Los diagramas UML del proyecto se encuentran en:
+
+src/main/resources/plantuml/
+
+Incluyen:
+
+- Diagrama de casos de uso (casos.puml)
+- Diagrama de clases (clases.puml)
+- Diagrama de secuencia (secuencia.puml)
+
+El diagrama de casos de uso ha sido actualizado para reflejar las nuevas
+funcionalidades implementadas.
+
+---
+
+## Releases
+
+### v1.0 – Initial version
+- Estructura inicial del proyecto
+- Configuración básica con Maven
+- Arquitectura MVC
+- Carga de pedidos desde archivo JSON
+
+### v1.1 – Release automation setup
+- Configuración del versionado automático en GitHub
+- Generación automática del mensaje de release
+- Sin cambios funcionales en la aplicación
+
+### v1.2 – Icon + EUR/USD Conversion (Assignment Submission)
+- Icono personalizado de la aplicación
+- Conversión dinámica EUR → USD usando Frankfurter API
+- Visualización de totales en EUR y USD en la interfaz gráfica
+- README actualizado
+- Limpieza del repositorio y corrección de estructura
+
+### v2.0 – Order Management and Persistence
+Incluye todas las funcionalidades desarrolladas en la última iteración:
+- Listado de pedidos al iniciar la aplicación
+- Búsqueda y visualización de pedidos
+- Creación de pedidos
+- Edición de pedidos (cantidad y descuento de artículos)
+- Eliminación de pedidos
+- Persistencia completa en archivo JSON
+- Diagrama de casos de uso actualizado
+- Documentación final actualizada
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
+Este proyecto se distribuye bajo la Licencia MIT.

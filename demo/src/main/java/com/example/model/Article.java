@@ -1,7 +1,9 @@
 package com.example.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Article {
     // Mapeo entre nombres del JSON y tus variables
     @JsonProperty("name")
