@@ -7,13 +7,12 @@ User --> (List orders)
 User --> (Search order)
 User --> (View order details)
 User --> (Create order)
+User --> (Edit order)
 User --> (Delete order)
 
 (Search order) --> (View order details) : <<include>>
 (Create order) --> (List orders) : <<include>>
+(Edit order) --> (View order details) : <<include>>
 (Delete order) --> (List orders) : <<include>>
 
 @enduml
-
-User --> (Edit order)
-(Edit order) --> (View order details) : <<include>>
