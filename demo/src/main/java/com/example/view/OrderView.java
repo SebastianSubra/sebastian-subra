@@ -9,6 +9,7 @@ public class OrderView extends JFrame {
 
     private JTextField searchField = new JTextField(10);
     private JButton searchButton = new JButton("Search");
+
     private JTextArea resultArea = new JTextArea(10, 40);
     private JLabel labelTotalUSD;
 
@@ -90,18 +91,14 @@ public class OrderView extends JFrame {
         double grossEUR = order.getGrossTotal();
         double discountedEUR = order.getDiscountedTotal();
 
-        sb.append("\nGross total (EUR): ")
-          .append(String.format("%.2f", grossEUR)).append("€");
-        sb.append("\nDiscounted total (EUR): ")
-          .append(String.format("%.2f", discountedEUR)).append("€");
+        sb.append("\nGross total (EUR): ").append(String.format("%.2f", grossEUR)).append("€");
+        sb.append("\nDiscounted total (EUR): ").append(String.format("%.2f", discountedEUR)).append("€");
 
         double grossUSD = grossEUR * rate;
         double discountedUSD = discountedEUR * rate;
 
-        sb.append("\nGross total (USD): ")
-          .append(String.format("%.2f", grossUSD)).append("$");
-        sb.append("\nDiscounted total (USD): ")
-          .append(String.format("%.2f", discountedUSD)).append("$");
+        sb.append("\nGross total (USD): ").append(String.format("%.2f", grossUSD)).append("$");
+        sb.append("\nDiscounted total (USD): ").append(String.format("%.2f", discountedUSD)).append("$");
 
         resultArea.setText(sb.toString());
         labelTotalUSD.setText("USD Total: " + String.format("%.2f", discountedUSD) + "$");

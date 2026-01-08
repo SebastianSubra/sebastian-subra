@@ -1,12 +1,12 @@
 [ {
-  "grossTotal" : 150.0,
-  "discountedTotal" : 139.0,
+  "discountedTotal" : 184.0,
+  "grossTotal" : 200.0,
   "id" : "O001",
   "articles" : [ {
-    "grossAmount" : 100.0,
-    "discountedAmount" : 90.0,
+    "grossAmount" : 150.0,
+    "discountedAmount" : 135.0,
     "name" : "Keyboard",
-    "quantity" : 2,
+    "quantity" : 3,
     "unitPrice" : 50.0,
     "discount" : 10.0
   }, {
@@ -25,8 +25,8 @@
     "discount" : 5.0
   } ]
 }, {
-  "grossTotal" : 280.0,
   "discountedTotal" : 258.0,
+  "grossTotal" : 280.0,
   "id" : "O002",
   "articles" : [ {
     "grossAmount" : 200.0,
@@ -44,8 +44,8 @@
     "discount" : 15.0
   } ]
 }, {
-  "grossTotal" : 490.0,
   "discountedTotal" : 446.0,
+  "grossTotal" : 490.0,
   "id" : "O003",
   "articles" : [ {
     "grossAmount" : 50.0,
@@ -63,8 +63,8 @@
     "discount" : 10.0
   } ]
 }, {
-  "grossTotal" : 2670.0,
   "discountedTotal" : 2536.5,
+  "grossTotal" : 2670.0,
   "id" : "O004",
   "articles" : [ {
     "grossAmount" : 2670.0,
@@ -75,14 +75,14 @@
     "discount" : 5.0
   } ]
 }, {
-  "grossTotal" : 5215.99,
-  "discountedTotal" : 4435.5913,
+  "discountedTotal" : 4925.5913,
+  "grossTotal" : 5715.99,
   "id" : "O005",
   "articles" : [ {
-    "grossAmount" : 500.0,
-    "discountedAmount" : 490.0,
+    "grossAmount" : 1000.0,
+    "discountedAmount" : 980.0,
     "name" : "Iphone X",
-    "quantity" : 1,
+    "quantity" : 2,
     "unitPrice" : 500.0,
     "discount" : 2.0
   }, {
@@ -108,8 +108,34 @@
     "discount" : 15.0
   } ]
 }, {
-  "grossTotal" : 0.0,
+  "discountedTotal" : 7.0,
+  "grossTotal" : 11.0,
+  "id" : "O007",
+  "articles" : [ {
+    "grossAmount" : 6.0,
+    "discountedAmount" : 3.0,
+    "name" : "Melones",
+    "quantity" : 2,
+    "unitPrice" : 3.0,
+    "discount" : 50.0
+  }, {
+    "grossAmount" : 5.0,
+    "discountedAmount" : 4.0,
+    "name" : "Cocos",
+    "quantity" : 1,
+    "unitPrice" : 5.0,
+    "discount" : 20.0
+  } ]
+}, {
   "discountedTotal" : 0.0,
-  "id" : "O006",
-  "articles" : [ ]
+  "grossTotal" : 0.0,
+  "id" : "Prueba",
+  "articles" : [ {
+    "grossAmount" : 0.0,
+    "discountedAmount" : 0.0,
+    "name" : "Alumnos",
+    "quantity" : 0,
+    "unitPrice" : 0.0,
+    "discount" : 0.0
+  } ]
 } ]

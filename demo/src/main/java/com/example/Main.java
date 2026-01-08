@@ -26,14 +26,14 @@ public class Main {
             File externalFile = new File("orders.json");
 
             if (externalFile.exists()) {
-                // 1️⃣ Leer desde JSON externo (persistente)
+                //  Leer desde JSON externo (persistente)
                 orders = mapper.readValue(
                         externalFile,
                         new TypeReference<List<Order>>() {}
                 );
                 log.info("Orders loaded from external orders.json");
             } else {
-                // 2️⃣ Leer desde resources (carga inicial)
+                //  Leer desde resources (carga inicial)
                 InputStream inputStream = Main.class.getResourceAsStream("/orders.json");
 
                 if (inputStream == null) {
@@ -48,7 +48,7 @@ public class Main {
                 log.info("Orders loaded from resources orders.json");
             }
 
-            log.info("✅ Orders loaded successfully. Total: {}", orders.size());
+            log.info(" Orders loaded successfully. Total: {}", orders.size());
 
             OrderView view = new OrderView();
             new OrderController(view, orders);
