@@ -21,7 +21,7 @@ public class EditOrderDialog extends JDialog {
         setLayout(new BorderLayout());
 
         model = new DefaultTableModel(
-                new Object[]{"Name", "Quantity", "Price (€)", "Discount (%)"},
+                new Object[]{"Name", "Quantity", "Price (EUR)", "Discount (%)"},
                 0
         ) {
             @Override

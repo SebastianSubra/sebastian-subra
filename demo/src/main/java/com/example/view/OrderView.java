@@ -83,25 +83,25 @@ public class OrderView extends JFrame {
                     * (1 - a.getDescuento() / 100.0);
             sb.append(a.getNombre())
               .append(" x").append(a.getCantidad())
-              .append(" @ ").append(a.getPrecio()).append("€ (discount ")
+              .append(" @ ").append(a.getPrecio()).append("EUR (discount ")
               .append(a.getDescuento()).append("%) = ")
-              .append(String.format("%.2f", subtotal)).append("€\n");
+              .append(String.format("%.2f", subtotal)).append("EUR\n");
         });
 
         double grossEUR = order.getGrossTotal();
         double discountedEUR = order.getDiscountedTotal();
 
-        sb.append("\nGross total (EUR): ").append(String.format("%.2f", grossEUR)).append("€");
-        sb.append("\nDiscounted total (EUR): ").append(String.format("%.2f", discountedEUR)).append("€");
+        sb.append("\nGross total (EUR): ").append(String.format("%.2f", grossEUR)).append("EUR");
+        sb.append("\nDiscounted total (EUR): ").append(String.format("%.2f", discountedEUR)).append("EUR");
 
         double grossUSD = grossEUR * rate;
         double discountedUSD = discountedEUR * rate;
 
-        sb.append("\nGross total (USD): ").append(String.format("%.2f", grossUSD)).append("$");
-        sb.append("\nDiscounted total (USD): ").append(String.format("%.2f", discountedUSD)).append("$");
+        sb.append("\nGross total (USD): ").append(String.format("%.2f", grossUSD)).append("USD");
+        sb.append("\nDiscounted total (USD): ").append(String.format("%.2f", discountedUSD)).append("USD");
 
         resultArea.setText(sb.toString());
-        labelTotalUSD.setText("USD Total: " + String.format("%.2f", discountedUSD) + "$");
+        labelTotalUSD.setText("USD Total: " + String.format("%.2f", discountedUSD) + "USD");
     }
 
     public void clearOrderDetails() {

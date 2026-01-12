@@ -3,22 +3,22 @@
   "grossTotal" : 200.0,
   "id" : "O001",
   "articles" : [ {
-    "grossAmount" : 150.0,
     "discountedAmount" : 135.0,
+    "grossAmount" : 150.0,
     "name" : "Keyboard",
     "quantity" : 3,
     "unitPrice" : 50.0,
     "discount" : 10.0
   }, {
-    "grossAmount" : 30.0,
     "discountedAmount" : 30.0,
+    "grossAmount" : 30.0,
     "name" : "Mouse",
     "quantity" : 1,
     "unitPrice" : 30.0,
     "discount" : 0.0
   }, {
-    "grossAmount" : 20.0,
     "discountedAmount" : 19.0,
+    "grossAmount" : 20.0,
     "name" : "Charger",
     "quantity" : 1,
     "unitPrice" : 20.0,
@@ -29,15 +29,15 @@
   "grossTotal" : 280.0,
   "id" : "O002",
   "articles" : [ {
-    "grossAmount" : 200.0,
     "discountedAmount" : 190.0,
+    "grossAmount" : 200.0,
     "name" : "Monitor",
     "quantity" : 1,
     "unitPrice" : 200.0,
     "discount" : 5.0
   }, {
-    "grossAmount" : 80.0,
     "discountedAmount" : 68.0,
+    "grossAmount" : 80.0,
     "name" : "Headset",
     "quantity" : 2,
     "unitPrice" : 40.0,
@@ -48,15 +48,15 @@
   "grossTotal" : 490.0,
   "id" : "O003",
   "articles" : [ {
-    "grossAmount" : 50.0,
     "discountedAmount" : 50.0,
+    "grossAmount" : 50.0,
     "name" : "Call of Duty",
     "quantity" : 1,
     "unitPrice" : 50.0,
     "discount" : 0.0
   }, {
-    "grossAmount" : 440.0,
     "discountedAmount" : 396.0,
+    "grossAmount" : 440.0,
     "name" : "Gaming Chair",
     "quantity" : 1,
     "unitPrice" : 440.0,
@@ -67,8 +67,8 @@
   "grossTotal" : 2670.0,
   "id" : "O004",
   "articles" : [ {
-    "grossAmount" : 2670.0,
     "discountedAmount" : 2536.5,
+    "grossAmount" : 2670.0,
     "name" : "Laptop",
     "quantity" : 3,
     "unitPrice" : 890.0,
@@ -79,60 +79,41 @@
   "grossTotal" : 5715.99,
   "id" : "O005",
   "articles" : [ {
-    "grossAmount" : 1000.0,
     "discountedAmount" : 980.0,
+    "grossAmount" : 1000.0,
     "name" : "Iphone X",
     "quantity" : 2,
     "unitPrice" : 500.0,
     "discount" : 2.0
   }, {
-    "grossAmount" : 1300.0,
     "discountedAmount" : 1040.0,
+    "grossAmount" : 1300.0,
     "name" : "Nvidia Graphic card",
     "quantity" : 2,
     "unitPrice" : 650.0,
     "discount" : 20.0
   }, {
-    "grossAmount" : 99.99,
     "discountedAmount" : 86.9913,
+    "grossAmount" : 99.99,
     "name" : "Apple Airpods 3",
     "quantity" : 1,
     "unitPrice" : 99.99,
     "discount" : 13.0
   }, {
-    "grossAmount" : 3316.0,
     "discountedAmount" : 2818.6,
+    "grossAmount" : 3316.0,
     "name" : "Garmin Fenix 7X",
     "quantity" : 4,
     "unitPrice" : 829.0,
     "discount" : 15.0
   } ]
 }, {
-  "discountedTotal" : 7.0,
-  "grossTotal" : 11.0,
-  "id" : "O007",
-  "articles" : [ {
-    "grossAmount" : 6.0,
-    "discountedAmount" : 3.0,
-    "name" : "Melones",
-    "quantity" : 2,
-    "unitPrice" : 3.0,
-    "discount" : 50.0
-  }, {
-    "grossAmount" : 5.0,
-    "discountedAmount" : 4.0,
-    "name" : "Cocos",
-    "quantity" : 1,
-    "unitPrice" : 5.0,
-    "discount" : 20.0
-  } ]
-}, {
   "discountedTotal" : 0.0,
   "grossTotal" : 0.0,
   "id" : "Prueba",
   "articles" : [ {
-    "grossAmount" : 0.0,
     "discountedAmount" : 0.0,
+    "grossAmount" : 0.0,
     "name" : "Alumnos",
     "quantity" : 0,
     "unitPrice" : 0.0,
