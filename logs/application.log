@@ -210,3 +210,9 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 2026-01-12 19:14:15,899 INFO  com.example.Main - Starting Order Management System...
 2026-01-12 19:14:16,240 INFO  com.example.Main - Orders loaded from external orders.json
 2026-01-12 19:14:16,240 INFO  com.example.Main -  Orders loaded successfully. Total: 6
+2026-01-12 19:14:48,465 INFO  com.example.Main - Starting Order Management System...
+2026-01-12 19:14:48,784 INFO  com.example.Main - Orders loaded from external orders.json
+2026-01-12 19:14:48,784 INFO  com.example.Main -  Orders loaded successfully. Total: 6
+2026-01-12 19:42:38,056 INFO  com.example.Main - Starting Order Management System...
+2026-01-12 19:42:38,406 INFO  com.example.Main - Orders loaded from external orders.json
+2026-01-12 19:42:38,407 INFO  com.example.Main -  Orders loaded successfully. Total: 6
